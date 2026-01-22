@@ -1,0 +1,86 @@
+{
+  "application": {
+    "name": "my-web-app",
+    "version": "1.0.0",
+    "environment": "production",
+    "description": "Minimal web application config",
+    "maintainers": [
+      {
+        "name": "Alice Smith",
+        "email": "alice@example.com"
+      },
+      {
+        "name": "Bob Lee",
+        "email": "bob@example.com"
+      }
+    ]
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "protocol": "https",
+    "cors": {
+      "enabled": true,
+      "allowed_origins": [
+        "https://mywebapp.com",
+        "https://admin.mywebapp.com"
+      ]
+    }
+  },
+  "database": {
+    "engine": "mysql",
+    "host": "db.example.com",
+    "port": 3306,
+    "username": "admin",
+    "password": "mysecurepassword",
+    "dbname": "mywebapp_prod",
+    "pool_size": 10
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "file": "/var/log/mywebapp/app.log"
+  },
+  "app_ref": {
+    "name": "my-web-app",
+    "version": "1.0.0",
+    "environment": "production",
+    "description": "Minimal web application config",
+    "maintainers": [
+      {
+        "name": "Alice Smith",
+        "email": "alice@example.com"
+      },
+      {
+        "name": "Bob Lee",
+        "email": "bob@example.com"
+      }
+    ]
+  },
+  "server_ref": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "protocol": "https",
+    "cors": {
+      "enabled": true,
+      "allowed_origins": [
+        "https://mywebapp.com",
+        "https://admin.mywebapp.com"
+      ]
+    }
+  },
+  "database_ref": {
+    "engine": "mysql",
+    "host": "db.example.com",
+    "port": 3306,
+    "username": "admin",
+    "password": "mysecurepassword",
+    "dbname": "mywebapp_prod",
+    "pool_size": 10
+  },
+  "logging_ref": {
+    "level": "info",
+    "format": "json",
+    "file": "/var/log/mywebapp/app.log"
+  }
+}

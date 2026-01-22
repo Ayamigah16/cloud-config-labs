@@ -1,0 +1,40 @@
+application: &app
+  name: my-web-app
+  version: 1.0.0
+  environment: production
+  description: Minimal web application config
+  maintainers:
+  - name: Alice Smith
+    email: alice@example.com
+  - name: Bob Lee
+    email: bob@example.com
+
+server: &srv
+  host: 0.0.0.0
+  port: 8080
+  protocol: https
+  cors:
+    enabled: true
+    allowed_origins:
+    - https://mywebapp.com
+    - https://admin.mywebapp.com
+
+database: &db
+  engine: mysql
+  host: db.example.com
+  port: 3306
+  username: admin
+  password: mysecurepassword
+  dbname: mywebapp_prod
+  pool_size: 10
+
+logging: &log
+  level: info
+  format: json
+  file: /var/log/mywebapp/app.log
+
+# Aliases usage example
+app_ref: *app
+server_ref: *srv
+database_ref: *db
+logging_ref: *log
