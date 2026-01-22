@@ -7,33 +7,30 @@
     "maintainers": [
       {
         "name": "Alice Smith",
-        "email": "alice@example.com"
+        "email": "alice.smith@example.com"
       },
       {
         "name": "Bob Lee",
-        "email": "bob@example.com"
+        "email": "bob.lee@example.com"
       }
     ]
   },
   "server": {
-    "host": "0.0.0.0",
-    "port": 8080,
+    "host": "${server_host}",
+    "port": "${server_port}",
     "protocol": "https",
     "cors": {
       "enabled": true,
-      "allowed_origins": [
-        "https://mywebapp.com",
-        "https://admin.mywebapp.com"
-      ]
+      "allowed_origins": "${allowed_origins}"
     }
   },
   "database": {
     "engine": "mysql",
-    "host": "db.example.com",
-    "port": 3306,
-    "username": "admin",
-    "password": "mysecurepassword",
-    "dbname": "mywebapp_prod",
+    "host": "${db_host}",
+    "port": "${db_port}",
+    "username": "${db_username}",
+    "password": "${db_password}",
+    "dbname": "${db_name}",
     "pool_size": 10
   },
   "logging": {
@@ -49,33 +46,30 @@
     "maintainers": [
       {
         "name": "Alice Smith",
-        "email": "alice@example.com"
+        "email": "alice.smith@example.com"
       },
       {
         "name": "Bob Lee",
-        "email": "bob@example.com"
+        "email": "bob.lee@example.com"
       }
     ]
   },
   "server_ref": {
-    "host": "0.0.0.0",
-    "port": 8080,
+    "host": "${server_host}",
+    "port": "${server_port}",
     "protocol": "https",
     "cors": {
       "enabled": true,
-      "allowed_origins": [
-        "https://mywebapp.com",
-        "https://admin.mywebapp.com"
-      ]
+      "allowed_origins": "${allowed_origins}"
     }
   },
   "database_ref": {
     "engine": "mysql",
-    "host": "db.example.com",
-    "port": 3306,
-    "username": "admin",
-    "password": "mysecurepassword",
-    "dbname": "mywebapp_prod",
+    "host": "${db_host}",
+    "port": "${db_port}",
+    "username": "${db_username}",
+    "password": "${db_password}",
+    "dbname": "${db_name}",
     "pool_size": 10
   },
   "logging_ref": {

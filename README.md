@@ -1,4 +1,5 @@
 # Cloud Config Labs
+
 A hands-on learning repository focused on configuration-as-code fundamentals using YAML and JSON. This project is designed to help learners and early-career engineers build production-ready configuration patterns  
 
 ## Learning Objectives
@@ -24,16 +25,19 @@ A hands-on learning repository focused on configuration-as-code fundamentals usi
 ### Installation
 
 #### Install yq (YAML processor)
+
 ```bash
 sudo snap install yq
 ```
 
 Verify installation:
+
 ```bash
 yq --version
 ```
 
 #### Install PyYAML (Python library)
+
 ```bash
 pip install pyyaml
 ```
@@ -42,12 +46,12 @@ pip install pyyaml
 
 ### Validation Tools
 
-- Online: https://yamlvalidator.com
-- Online: https://jsonlint.com
+- Online: <https://yamlvalidator.com>
+- Online: <https://jsonlint.com>
 - Command line: Use the Python validation command above
 
 ---
- 
+
 ### Repository Structure
 
 ```
@@ -61,6 +65,7 @@ scripting-and-cloud-fundamentals/
 ---
 
 ### Application Configuration Structure
+
 - ***app-config.yaml***
 
 ```yaml
@@ -84,6 +89,7 @@ database:
 ### Usage
 
 #### Validate YAML Syntax
+
 ```bash
 python3 -c "import yaml; yaml.safe_load(open('app-config.yaml'))"
 ```
@@ -91,11 +97,13 @@ python3 -c "import yaml; yaml.safe_load(open('app-config.yaml'))"
 #### Convert YAML to JSON
 
 **Option 1: Using yq**
+
 ```bash
 yq eval -o=json app-config.yaml > app-config.json
 ```
 
 **Option 2: Using Python Script**
+
 ```bash
 python3 yaml_to_json.py <yaml_file>
 
@@ -106,11 +114,13 @@ python3 yaml_to_json.py app-config.yaml
 The script will automatically create a JSON file with the same base name (e.g., `app-config.yaml` → `app-config.json`)
 
 **Option 3: Manual Python Command (Advanced)**
+
 ```bash
 python3 -c "import yaml, json; data = yaml.safe_load(open('app-config.yaml')); print(json.dumps(data, indent=2))" > app-config.json
 ```
 
 ---
+
 ### YAML Best Practices
 
 ✓ Use consistent spacing (2 or 4 spaces per indentation level)  
@@ -118,8 +128,6 @@ python3 -c "import yaml, json; data = yaml.safe_load(open('app-config.yaml')); p
 ✓ Always validate your configuration before deploying  
 ✓ Use meaningful key names  
 ✓ Keep configurations organized in logical sections  
-
-
 
 ### Expected Outcome
 
